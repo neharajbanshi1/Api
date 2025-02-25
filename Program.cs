@@ -1,14 +1,10 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllers();  // Add support for controllers
+builder.Services.AddControllers();  
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 app.UseHttpsRedirection();
 
-// Enable controllers to handle routing
-app.MapControllers();  // This maps the routes to the controller actions
-
+app.MapControllers(); 
 app.Run();
